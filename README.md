@@ -1,0 +1,53 @@
+
+## Домашнее задание к занятию «Кластеры. Ресурсы под управлением облачных провайдеров»
+
+## Задание 4. Часть 1. Кластер MySQL с отказоустойчивой архитектурой
+
+### Файлы манифестов
+- [Cloud4-mysql/providers.tf](Cloud4-mysql/providers.tf)
+- [Cloud4-mysql/variables.tf](Cloud4-mysql/variables.tf)
+- [Cloud4-mysql/personal.auto.tfvars](Cloud4-mysql/personal.auto.tfvars)
+- [Cloud4-mysql/vpc.tf](Cloud4-mysql/vpc.tf)
+- [Cloud4-mysql/mysql.tf](Cloud4-mysql/mysql.tf)
+- [Cloud4-mysql/outputs.tf](Cloud4-mysql/outputs.tf)
+
+### Описание действий
+
+**1. Создание VPC и подсетей:**
+- Создана облачная сеть `mysql-network`
+- Созданы 3 private подсети в разных зонах доступности для отказоустойчивости:
+  - `mysql-private-a` (ru-central1-a, 10.10.0.0/24)
+  - `mysql-private-b` (ru-central1-b, 10.10.1.0/24)
+  - `mysql-private-d` (ru-central1-d, 10.10.2.0/24)
+- Настроена группа безопасности `mysql-security-group` с правилами доступа
+
+**2. Создание кластера MySQL:**
+- Создан кластер `mysql-cluster` в окружении PRESTABLE
+- Платформа: Intel Broadwell (b1.medium), 50% гарантированной доли vCPU
+- Размер диска: 20 ГБ (network-ssd)
+- Версия MySQL: 8.0
+- Включена репликация с размещением хостов в разных зонах (ru-central1-a и ru-central1-b)
+- Настроено время технического обслуживания: еженедельно, воскресенье в 03:00
+- Время начала резервного копирования: 23:59
+- Включена защита от непреднамеренного удаления (deletion_protection = true)
+
+**3. Создание базы данных и пользователя:**
+- Создана база данных `netology_db`
+- Создан пользователь `netology_user` с полными правами на базу
+
+### Выполнение и проверка
+
+```bash
+cd Cloud4-mysql
+terraform init
+terraform apply
+```
+<p align="center"> <img src="Cloud4-mysql/S/S13.png" width="900"/> <br> <em>Рисунок 1 - Результат выполнения terraform apply: успешное создание всех ресурсов</em> </p>
+
+<p align="center"> <img src="Cloud4-mysql/S/S1.png" width="900"/> <br> <em>Рисунок 2 - Основные настройки кластера MySQL: окружение PRESTABLE, класс хоста b1.medium (Intel Broadwell, 50% CPU), размер диска 20 ГБ, защита от удаления включена</em> </p>
+
+<p align="center"> <img src="Cloud4-mysql/S/S2.png" width="900"/> <br> <em>Рисунок 3 - Отказоустойчивость: хосты кластера размещены в разных зонах доступности (ru-central1-a и ru-central1-b)</em> </p>
+
+<p align="center"> <img src="Cloud4-mysql/S/S3.png" width="900"/> <br> <em>Рисунок 4 - Настройки резервного копирования и технического обслуживания: бэкап в 23:59, ТО еженедельно в воскресенье в 03:00</em> </p>
+
+<p align="center"> <img src="Cloud4-mysql/S/S4.png" width="900"/> <br> <em>Рисунок 5 - Созданные объекты: база данных netology_db и пользователь netology_user с полными правами</em> </p>
