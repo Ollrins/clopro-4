@@ -118,7 +118,7 @@
 
 <p align="center"> <img src="S/S15.png" width="900"/> <br> <em>Рисунок 2 - Рабочие узлы кластера: 3 ноды в статусе Ready с автомасштабированием от 3 до 6. Узлы размещены в зоне ru-central1-b, платформа standard-v3</em> </p>
 
-<p align="center"> <img src="S/S16.png" width="900"/> <br> <em>Рисунок 3 - Успешное подключение к phpMyAdmin через публичный IP-адрес. В левой панели видна база данных netology_db, созданная в кластере MySQL. Подтверждение работоспособности связки Kubernetes → phpMyAdmin → Managed MySQL через внутреннюю сеть VPC</em> </p>
+<p align="center"> <img src="S16.png" width="900"/> <br> <em>Рисунок 3 - Успешное подключение к phpMyAdmin через публичный IP-адрес. В левой панели видна база данных netology_db, созданная в кластере MySQL. Подтверждение работоспособности связки Kubernetes → phpMyAdmin → Managed MySQL через внутреннюю сеть VPC</em> </p>
 
 ### Особенности реализации и решённые проблемы
 
