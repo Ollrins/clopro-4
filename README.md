@@ -36,7 +36,7 @@
 
 ### Выполнение и проверка
 
-<p align="center"> <img src="S/S13.png" width="900"/> <br> <em>Рисунок 1 - Результат выполнения terraform apply: успешное создание всех ресурсов</em> </p>
+<p align="center"> <img src="S/S13.png" width="600"/> <br> <em>Рисунок 1 - Результат выполнения terraform apply: успешное создание всех ресурсов</em> </p>
 
 <p align="center"> <img src="S/S1.png" width="900"/> <br> <em>Рисунок 2 - Основные настройки кластера MySQL: окружение PRESTABLE, класс хоста b1.medium (Intel Broadwell, 50% CPU), размер диска 20 ГБ, защита от удаления включена</em> </p>
 
