@@ -4,8 +4,8 @@
 ## Задание 4. Часть 1. Кластер MySQL с отказоустойчивой архитектурой
 
 ### Файлы манифестов
-- [Cloud4-mysql/providers.tf](Cloud4-mysql/providers.tf)
-- [Cloud4-mysql/variables.tf](Cloud4-mysql/variables.tf)
+- [providers.tf](providers.tf)
+- [variables.tf](variables.tf)
 - [Cloud4-mysql/personal.auto.tfvars](Cloud4-mysql/personal.auto.tfvars)
 - [Cloud4-mysql/vpc.tf](Cloud4-mysql/vpc.tf)
 - [Cloud4-mysql/mysql.tf](Cloud4-mysql/mysql.tf)
@@ -42,12 +42,13 @@ cd Cloud4-mysql
 terraform init
 terraform apply
 ```
-<p align="center"> <img src="Cloud4-mysql/S/S13.png" width="900"/> <br> <em>Рисунок 1 - Результат выполнения terraform apply: успешное создание всех ресурсов</em> </p>
+<p align="center"> <img src="S/S13.png" width="900"/> <br> <em>Рисунок 1 - Результат выполнения terraform apply: успешное создание всех ресурсов</em> </p>
 
-<p align="center"> <img src="Cloud4-mysql/S/S1.png" width="900"/> <br> <em>Рисунок 2 - Основные настройки кластера MySQL: окружение PRESTABLE, класс хоста b1.medium (Intel Broadwell, 50% CPU), размер диска 20 ГБ, защита от удаления включена</em> </p>
+<p align="center"> <img src="S/S1.png" width="900"/> <br> <em>Рисунок 2 - Основные настройки кластера MySQL: окружение PRESTABLE, класс хоста b1.medium (Intel Broadwell, 50% CPU), размер диска 20 ГБ, защита от удаления включена</em> </p>
 
-<p align="center"> <img src="Cloud4-mysql/S/S2.png" width="900"/> <br> <em>Рисунок 3 - Отказоустойчивость: хосты кластера размещены в разных зонах доступности (ru-central1-a и ru-central1-b)</em> </p>
+<p align="center"> <img src="S/S2.png" width="900"/> <br> <em>Рисунок 3 - Отказоустойчивость: хосты кластера размещены в разных зонах доступности (ru-central1-a и ru-central1-b)</em> </p>
 
-<p align="center"> <img src="Cloud4-mysql/S/S3.png" width="900"/> <br> <em>Рисунок 4 - Настройки резервного копирования и технического обслуживания: бэкап в 23:59, ТО еженедельно в воскресенье в 03:00</em> </p>
+<p align="center"> <img src="S/S3.png" width="900"/> <br> <em>Рисунок 4 - Настройки резервного копирования и технического обслуживания: бэкап в 23:59, ТО еженедельно в воскресенье в 03:00</em> </p>
 
-<p align="center"> <img src="Cloud4-mysql/S/S4.png" width="900"/> <br> <em>Рисунок 5 - Созданные объекты: база данных netology_db и пользователь netology_user с полными правами</em> </p>
+<p align="center"> <img src="S/S4.png" width="900"/> <br> <em>Рисунок 5 - Созданные объекты: база данных netology_db и пользователь netology_user с полными правами</em> </p>
+
