@@ -44,7 +44,7 @@
 
 <p align="center"> <img src="S/S3.png" width="900"/> <br> <em>Рисунок 4 - Настройки резервного копирования и технического обслуживания: бэкап в 23:59, ТО еженедельно в воскресенье в 03:00</em> </p>
 
-<p align="center"> <img src="S/S4.png" width="900"/> <br> <em>Рисунок 5 - Созданные объекты: база данных netology_db и пользователь netology_user с полными правами</em> </p>
+<p align="center"> <img src="S/S4.png" width="700"/> <br> <em>Рисунок 5 - Созданные объекты: база данных netology_db и пользователь netology_user с полными правами</em> </p>
 
 
 ## Часть 2. Кластер Kubernetes и микросервис phpMyAdmin
