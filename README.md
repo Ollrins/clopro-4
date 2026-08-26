@@ -6,10 +6,9 @@
 ### Файлы манифестов
 - [providers.tf](providers.tf)
 - [variables.tf](variables.tf)
-- [Cloud4-mysql/personal.auto.tfvars](Cloud4-mysql/personal.auto.tfvars)
-- [Cloud4-mysql/vpc.tf](Cloud4-mysql/vpc.tf)
-- [Cloud4-mysql/mysql.tf](Cloud4-mysql/mysql.tf)
-- [Cloud4-mysql/outputs.tf](Cloud4-mysql/outputs.tf)
+- [vpc.tf](vpc.tf)
+- [mysql.tf](mysql.tf)
+- [outputs.tf](outputs.tf)
 
 ### Описание действий
 
@@ -37,11 +36,6 @@
 
 ### Выполнение и проверка
 
-```bash
-cd Cloud4-mysql
-terraform init
-terraform apply
-```
 <p align="center"> <img src="S/S13.png" width="900"/> <br> <em>Рисунок 1 - Результат выполнения terraform apply: успешное создание всех ресурсов</em> </p>
 
 <p align="center"> <img src="S/S1.png" width="900"/> <br> <em>Рисунок 2 - Основные настройки кластера MySQL: окружение PRESTABLE, класс хоста b1.medium (Intel Broadwell, 50% CPU), размер диска 20 ГБ, защита от удаления включена</em> </p>
